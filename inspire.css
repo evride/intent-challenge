@@ -1,0 +1,56 @@
+html.inspire-overlay-active, html.inspire-overlay-active body{
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+}
+button.inspire-btn{
+	color: #ffffff;
+	background: #3EA8F3;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	font-size: 1.5em;
+	border: none;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    transition: transform 0.4s;
+}
+div.inspire-overlay{
+
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99999999;
+	display: flex;
+	flex-flow:column;
+}
+div.inspire-overlay iframe{
+	border: none;
+	width: 90%;
+	height: 85%;
+	margin: auto;
+	border-radius: 5px;
+
+}
+div.inspire-overlay button.inspire-close-btn{
+	background: none;
+	border: none;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight: lighter;
+	position: absolute;
+	right: 0;
+	top: 3.75%;
+	transform: translateX(-50%) translateY(-50%);
+	padding: 10px;
+}
+
+
+.inspire-overlay-active button.inspire-btn {
+	transform: scale(0);
+}
