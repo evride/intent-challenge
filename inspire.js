@@ -7,8 +7,6 @@
 
 	function InspireModule(){
 		this.clicks = 0;
-		this.overlayOpen = false;
-
 		this.overlayContainer = null;
 		this.openButton = null;
 
@@ -31,7 +29,7 @@
 		this.closeInspireOverlay = this._closeInspireOverlay.bind(this);
 	}
 	p.init = function(){
-		this.openButton  = this.createInspireButton();
+		this.openButton = this.createInspireButton();
 		$b.appendChild(this.openButton);
 		this.openButton.addEventListener('click', this.onButtonClicked);
 	}
@@ -47,10 +45,8 @@
 		var req = new XMLHttpRequest();
 		req.addEventListener("load", function(evt){
 			let styles = String(evt.currentTarget.responseText).replace(/inspire/g, that.prefix);
-
 			let css = $d.createElement('style');
 			css.type = 'text/css'; 
-		
 	        if (css.styleSheet) {
 	            css.styleSheet.cssText = styles; 
 	        }else{
